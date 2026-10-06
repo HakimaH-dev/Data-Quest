@@ -41,14 +41,17 @@ def get_player_pos():
             y1 = float(coord2[1])
             test = coord2[2]
             z1 = float(coord2[2])
+            tu2 = (x1, y1, z1)
             break
         except ValueError as e:
-            print(f"Error on parameter {test} : {e}")
+            print(f"Error on parameter '{test}' : {e}")
         except IndexError:
             print("Invalid syntax")
 
     distance2 = math.sqrt((x1 - x)**2 + (y1 - y)**2 + (z1 - z)**2)
     print(f"Distance between the 2 sets of coordinates: {round(distance2, 4)}")
+    return tu
+    return tu2
 
 
 def ft_coordinate_system():
